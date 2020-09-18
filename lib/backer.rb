@@ -1,4 +1,4 @@
-require "pry"
+
 class Backer
   attr_reader :name
 
@@ -13,7 +13,6 @@ class Backer
   def backed_projects
     proj_array = []
     ProjectBacker.all.each do |p| 
-      binding.pry
       if p.backer == self
         proj_array << p.project
       end
